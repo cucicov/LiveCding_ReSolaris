@@ -1,0 +1,158 @@
+ScarySynth = "D:/samples/02ScarySynth.wav"
+ShortBass = "D:/samples/03ShortBass.wav"
+ShortCanBlip = "D:/samples/04ShortCanBlip.flac"
+WaterDrops = "D:/samples/05WaterDrops.wav"
+RithmWhisper = "D:/samples/06RithmWhisper.wav"
+ShortCreepyWhisper = "D:/samples/06ShortCreepyWhisper.wav"
+AlienDrone = "D:/samples/07AlienDrone.wav"
+NoiseLong = "D:/samples/07NoiseLong.wav"
+SignalOrca = "D:/samples/08SignalOrca.aiff"
+DnbBass = "D:/samples/09DnbBass.aiff"
+MetalBass = "D:/samples/09MetalBass.wav"
+DarkHorn = "D:/samples/11DarkHorn.wav"
+DarkRise = "D:/samples/12DarkRise.wav"
+DogBegging = "D:/samples/13DogBegging.wav"
+Meat = "D:/samples/14Meat.wav"
+RussianFemale = "D:/samples/15RussianFemale.wav"
+VoiceHahaha = "D:/samples/16VoiceHahaha.wav"
+VoiceDoneBook = "D:/samples/17VoiceDoneBook.wav"
+VoiceSecurity = "D:/samples/18VoiceSecurity.wav"
+ChoirChurch = "D:/samples/19ChoirChurch.wav"
+PianoHeaven = "D:/samples/20PianoHeaven.wav"
+PianoSecession = "D:/samples/21PianoSecession.aiff"
+
+live_loop :ShortBass do
+  stop
+  with_fx :echo, decay:5, pre_amp:1 do
+    sample ShortBass, attack: 0.9, release: 0.5
+    sleep 8.0
+  end
+end
+
+##| live_loop :ScarySynth do
+##|   sample ScarySynth
+##|   sleep 4.0
+##| end
+
+live_loop :ShortCanBlip do
+  sample ShortCanBlip
+  sleep rrand(20, 30)
+end
+
+live_loop :WaterDrops do
+  stop
+  sample WaterDrops, release: 1, attack: 4
+  sleep 8.0
+end
+
+live_loop :RithmWhisper do
+  stop
+  sample RithmWhisper
+  sleep 40.0
+end
+
+live_loop :ShortCreepyWhisper do
+  stop
+  sample ShortCreepyWhisper
+  sleep 4.0
+end
+
+live_loop :AliendDrone do
+  stop
+  sample AlienDrone
+  sleep 40.0
+end
+
+live_loop :NoiseLong do
+  stop
+  sample NoiseLong
+  sleep 40.0
+end
+
+
+live_loop :SignalOrca do
+  stop
+  sample SignalOrca, pre_amp: 1
+  sleep 6.0
+end
+
+
+
+live_loop :DarkHorn do
+  stop
+  sample DarkHorn, pre_amp: 1
+  sleep 16.0
+end
+
+
+live_loop :DarkRise do
+  stop
+  sample DarkRise, pre_amp: 1
+  sleep 16.0
+end
+
+
+
+
+
+live_loop :MetalBass do
+  stop
+  sample MetalBass, pre_amp: 1
+  sleep 8.0
+end
+
+live_loop :DnbBass do
+    sample DnbBass, amp:1.2
+    sleep 8.0
+end
+
+
+
+
+live_loop :VoiceHahaha do
+  stop
+  sample VoiceHahaha
+  sleep 16.0
+end
+
+
+
+
+
+live_loop :PianoSecession do
+  stop
+  sample PianoSecession
+  sleep 8.0
+end
+
+live_loop :Meat do
+	stop
+    sample Meat, rate: 0.5
+    sleep 8.0
+end
+
+live_loop :DogBegging do
+  stop
+  sample DogBegging, rate: 0.2
+  sleep 32.0
+end
+
+
+live_loop :ChoirChurch do
+  stop
+  sample ChoirChurch, amp: 2.0
+  sleep 8.0
+end
+
+
+live_loop :RussianFemale do
+  stop
+  sample RussianFemale,amp: 2
+  sleep 16.0
+end
+
+
+live_loop :PianoHeaven do
+  sample PianoHeaven
+  sleep 16.0
+end
